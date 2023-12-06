@@ -1,10 +1,11 @@
 import {createRoot} from "react-dom/client"
 
+import Home from "./components/Home";
 
 const App = () =>{
     return(
         <div>
-            <h1>HI HOME PAGE</h1>
+            <Home />
         </div>
     )
 }
