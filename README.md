@@ -1,2 +1,3 @@
 # Pomodoro
-Experiment features go through here...
+Pomodoro website to track progresses.
+
