@@ -85,8 +85,8 @@ const Graph = ({days}) => {
     let dotsValue = [5, 7, 8, 0, 4, 10, 18];
     let connectArray = [];
 
-    let MAX_WIDTH = 1200 / days;
-    let MAX_HEIGHT = 400 / 24;
+    let MAX_WIDTH = 900 / days;
+    let MAX_HEIGHT = 300 / 24;
 
     let f_X = 150;
     let f_startY = 50;

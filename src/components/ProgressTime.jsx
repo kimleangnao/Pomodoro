@@ -7,7 +7,7 @@ const ProgressTime = ({repeats, whatIsRunning, countdownMinutes, breakTimeMinute
 
     return(
         <div>
-             <div className="home-wrapper-ghostBar">
+            <div className="home-wrapper-ghostBar">
                 <div className="home-wrapper-ghostBar-times"> {repeats} </div>
             </div>
             <div className="home-wrapper-times">

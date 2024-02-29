@@ -120,7 +120,7 @@ const Theme = ({theme, setTheme}) =>{
                         theme[2].map((v,i) => (
                         <button key={i} id={v.id} className={v.selected === true ? "theme-wrapper-sounds-alert  theme-selected" : "theme-wrapper-sounds-alert"} onClick={(e) => selectToActive(e, v.id, 2)}>
                             <div className="theme-wrapper-sounds-alert-button">
-                                <img src={playButtonWhite} alt="icon not found" />
+                                <img src={playButtonWhite} alt="icon not found" className="theme-wrapper-sounds-alert-button-image" />
                             </div>
                             <div className="theme-wrapper-sounds-alert-text">
                                {v.soundName}
