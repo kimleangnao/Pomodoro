@@ -1,24 +1,27 @@
 
 
 
-const ProgressTime = ({repeats, whatIsRunning, countdownMinutes, breakTimeMinute, inputMinute, countdownSeconds, breakTimeSecond, inputSecond}) =>{
+const ProgressTime = ({minute, second, minuteChange, secondChange, setMinute, setSecond}) =>{
 
+    //make number look good
+    //if it's single digit, add zero before it
+    // that's it
 
 
     return(
         <div>
             <div className="home-wrapper-ghostBar">
-                <div className="home-wrapper-ghostBar-times"> {repeats} </div>
+                <div className="home-wrapper-ghostBar-times"> {0} </div>
             </div>
             <div className="home-wrapper-times">
                 
-                <input type="tel" value={whatIsRunning === "progress" ? countdownMinutes :  breakTimeMinute} min="0" max="99" onChange={(e) => inputMinute(e)} className="home-wrapper-times-minutes" />
+                <input type="tel" value={minute} onChange={(e) => minuteChange(e, setMinute)} min="0" max="99"  className="home-wrapper-times-minutes" />
                  
                 <div className="home-wrapper-times-colons">
                     :
                 </div>
 
-                <input type="tel" value={whatIsRunning === "progress" ? countdownSeconds :  breakTimeSecond} onChange={(e) => inputSecond(e)}  min="0" max="59"  className="home-wrapper-times-seconds" />
+                <input type="tel" value={second} onChange={(e) => secondChange(e, setSecond)}   min="0" max="59"  className="home-wrapper-times-seconds" />
              
             </div>
         </div>

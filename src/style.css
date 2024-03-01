@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Odibee+Sans&display=swap');
+
 :root {
     --main-nav-color: rgb(48, 46, 46);
 }
@@ -119,7 +120,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-    
+        font-family: "Roboto Mono";
 
         .home-wrapper-times-minutes{
             width: 150px;
@@ -130,6 +131,7 @@
             border: 0px solid white;
             background-color: transparent;
             font-size: 55px;
+            font-family: "Graduate";
         
         }
     
@@ -140,6 +142,7 @@
             text-align: center;
             line-height: 40px;
             font-size: 55px;
+            font-family: "Graduate";
         }
     
         .home-wrapper-times-seconds{
@@ -151,6 +154,7 @@
             border: 0px solid white;
             background-color: transparent;
             font-size: 55px;
+            font-family: "Graduate";
         }
     }
 
@@ -171,6 +175,7 @@
         display: none;
     }
 }
+
 .navbar-outer{
     position: relative;
     z-index: 15;
@@ -853,8 +858,8 @@
         line-height: 60px;
         padding-left: 10px;
         font-size: 16px;
-
         
+
     }
 
 }
@@ -2684,10 +2689,10 @@
     .home-maskedTime{
         position: absolute;
         z-index: 15;
-        top: 900px;
-        left: 30px;
+        bottom: 15px;
+        left: 15px;
+        margin-left: 0px;
         color: white;
-
         font-size: 25px;
     }
 
@@ -2706,6 +2711,7 @@
             display: flex;
             justify-content: center;
             flex-flow: row nowrap;
+       
 
             .home-wrapper-bar-progress{
                 width: 550px;
@@ -2716,7 +2722,7 @@
                 line-height: 70px;
                 padding-left: 10px;
                 color: grey;
-
+      
                 font-size: 20px;
 
                 &:hover{
@@ -2770,7 +2776,7 @@
         .home-wrapper-times{
             width: 900px;
             height: 350px;
-            margin: 0 auto;
+            margin: 50px auto;
             display: flex;
             flex-flow: row nowrap;
     
@@ -2811,14 +2817,13 @@
         }
     
         .home-wrapper-start-button{
-            width: 250px;
-            height: 80px;
+            width: 150px;
+            height: 50px;
             margin: 50px auto;
             background-color: white;
             text-align: center;
-            line-height: 80px;
-            font-size: 50px;
-
+            line-height: 50px;
+            font-size: 30px;
             border-radius: 2px;
             display: block;
             border: 0px;
