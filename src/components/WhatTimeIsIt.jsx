@@ -27,7 +27,7 @@ const WhatTimeIsIt = () => {
 
     return(
         <div>
-            {timeHour < 10 ? "0"+timeHour : timeHour} : {timeMinute} {timeHour>= 12 ? "PM" : "AM"}
+            {timeHour < 10 ? "0"+timeHour : timeHour} : {timeMinute < 10 ? "0"+timeMinute : timeMinute} {timeHour>= 12 ? "PM" : "AM"}
         </div>
     )
 }
