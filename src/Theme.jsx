@@ -1,18 +1,18 @@
 
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
+
 
 
 import playButtonWhite from "../resources/images/playbutton-white.png";
 
-import closeButtonWhite from "../resources/images/closebutton-white.png";
-import copyRight from "../resources/images/copyright-icon.png";
+//import closeButtonWhite from "../resources/images/closebutton-white.png";
+//import copyRight from "../resources/images/copyright-icon.png";
 
 const Theme = ({theme, setTheme}) =>{
 
-    const [switchCredits, setSwitchCredits] = useState(false)
-
+    //const [switchCredits, setSwitchCredits] = useState(false)
+    {/*
     const switchCreditFunction = (e) => {
         e.preventDefault();
 
@@ -22,6 +22,7 @@ const Theme = ({theme, setTheme}) =>{
             setSwitchCredits(true);
         }
     }
+    */}
 
     const selectToActive = (e, id, index) => {
         e.preventDefault();
@@ -50,7 +51,7 @@ const Theme = ({theme, setTheme}) =>{
                 THEME
            </h1>
            <div className="theme-wrapper">
-                {/*credits section*/}
+                {/*credits section removed for now
                 <button className={switchCredits === false ? "theme-wrapper-creditsOpen" : "theme-wrapper-creditsOpen display-wrapper-none"} onClick={(e) => switchCreditFunction(e)}>
                     <img title="credits link" className="theme-wrapper-creditsOpen-icon" src={copyRight} alt="icon not found" />
                 </button>
@@ -81,6 +82,7 @@ const Theme = ({theme, setTheme}) =>{
                     <Link to="/">dfdfdf</Link> <br />
 
                 </div>
+                */}
 
                 {/*theme section*/}
                 <div className="theme-wrapper-title">
@@ -120,7 +122,7 @@ const Theme = ({theme, setTheme}) =>{
                         theme[2].map((v,i) => (
                         <button key={i} id={v.id} className={v.selected === true ? "theme-wrapper-sounds-alert  theme-selected" : "theme-wrapper-sounds-alert"} onClick={(e) => selectToActive(e, v.id, 2)}>
                             <div className="theme-wrapper-sounds-alert-button">
-                                <img src={playButtonWhite} alt="icon not found" />
+                                <img src={playButtonWhite} alt="icon not found" className="theme-wrapper-sounds-alert-button-image" />
                             </div>
                             <div className="theme-wrapper-sounds-alert-text">
                                {v.soundName}
@@ -131,7 +133,7 @@ const Theme = ({theme, setTheme}) =>{
                    
                 </div>
 
-                <button className="theme-wrapper-button">SAVE</button>
+                <Link to="/" className="theme-wrapper-button">HOME</Link>
            </div>
         </div>
     )

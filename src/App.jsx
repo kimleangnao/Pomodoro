@@ -6,11 +6,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Theme from "./Theme";
-import Profile from "./Profile"
-import History from "./History";
-import Statistic from "./Statistic";
-import Login from "./Login";
-import CreateAccount from "./CreateAccount";
+//import Profile from "./Profile"
+//import History from "./History";
+//import Statistic from "./Statistic";
+//import Login from "./Login";
+//import CreateAccount from "./CreateAccount";
 import WhatTimeIsIt from "./components/WhatTimeIsIt";
 
 
@@ -30,7 +30,7 @@ const queryClient = new QueryClient({
         cacheTime: Infinity,
       },
     },
-  });
+});
   
 
 const App = () =>{
@@ -136,13 +136,15 @@ const App = () =>{
         ]
     );
 
-    const saveThisInformationToTheServer = (e) => {
-        e.preventDefault();
-        //does nothing right now
-    }
+  
 
     const playSound = () =>{
         let findSound = theme[2].find((v) => v.selected === true)
+        findSound.soundSource.play();
+    }
+
+    const playSoundStart = () => {
+        let findSound = theme[2][1];
         findSound.soundSource.play();
     }
 
@@ -158,13 +160,17 @@ const App = () =>{
                 <QueryClientProvider client={queryClient}>
                     <Navbar />
                     <Routes>
-                        <Route path="/createaccount" element={<CreateAccount />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/history" element={<History />} />
-                        <Route path="/statistic" element={<Statistic />} />
-                        <Route path="/profile" element={<Profile />} />
+
+                        {/*
+                            <Route path="/createaccount" element={<CreateAccount />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/history" element={<History />} />
+                            <Route path="/statistic" element={<Statistic />} />
+                            <Route path="/profile" element={<Profile />} />
+                        */}
+                         
                         <Route path="/theme" element={<Theme theme={theme} setTheme={setTheme} />} />
-                        <Route path="/" element={<Home playSound={playSound} />} />
+                        <Route path="/" element={<Home playSound={playSound} playSoundStart={playSoundStart} />} />
                     
                     </Routes>   
                 </QueryClientProvider>
