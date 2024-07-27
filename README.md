@@ -1,3 +1,3 @@
 # Pomodoro
-Pomodoro website to track progresses.
+Pomodoro Technique website
 
